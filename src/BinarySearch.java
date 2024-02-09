@@ -10,17 +10,17 @@ public class BinarySearch {
         int high = numbers.length - 1;
 
         while (low <= high) {
-            int middlePostion = (low + high ) / 2;
-            int middleValue = numbers[middlePostion];
+            int middlePosition = (low + high ) / 2;
+            int middleValue = numbers[middlePosition];
 
             if (middleValue == target) {
-                return middlePostion;
+                return middlePosition;
             }
             else if (middleValue < target) {
-                low = middlePostion + 1;
+                low = middlePosition + 1;
             }
             else {
-                high = middlePostion - 1;
+                high = middlePosition - 1;
             }
         }
         return -1;
