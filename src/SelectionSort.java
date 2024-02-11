@@ -3,9 +3,8 @@ import java.util.Random;
 
 public class SelectionSort {
     public static void main(String[] args) {
-
-        int[] numbers = new int[10];
         Random rand = new Random();
+        int[] numbers = new int[10];
         for (int i = 0; i < numbers.length; i++) { //generate random numbers between 0 and 99
             numbers[i] = rand.nextInt(100);
         }
