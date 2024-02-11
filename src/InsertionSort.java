@@ -1,21 +1,14 @@
-import java.util.Random; //for generating random numbers
+import java.util.Arrays;
+import java.util.Random;
 
 public class InsertionSort {
     public static void main (String[] args) {
         Random rand =  new Random();
-        int[] numbers = new int[10];//create an array of 10 elements
-
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = rand.nextInt(100); //generate random numbers between 0 and 99
-        }
-
-        System.out.println("Before sorting:");
-        printArray(numbers);
-
+        int[] numbers = new int[10];
+        for (int i = 0; i < numbers.length; i++) numbers[i] = rand.nextInt(100);
+        System.out.println("Before sorting: " + Arrays.toString(numbers));
         insertionSort(numbers);
-
-        System.out.println("\nAfter sorting:");
-        printArray(numbers);
+        System.out.println("After sorting: " + Arrays.toString(numbers));
     }
 
     private static void insertionSort(int[] inputArray) { //insertion sort algorithm
@@ -27,11 +20,6 @@ public class InsertionSort {
                 j--; //decrement j
             }
             inputArray[j + 1] = currentValue; //set the current value to the previous value
-        }
-    }
-    private static void printArray(int[] numbers) { //helper method to print array
-        for (int number : numbers) {
-            System.out.println(number);
         }
     }
 }

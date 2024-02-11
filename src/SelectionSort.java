@@ -1,5 +1,5 @@
-import java.util.Random;
 import java.util.Arrays;
+import java.util.Random;
 
 public class SelectionSort {
     public static void main(String[] args) {
@@ -9,11 +9,9 @@ public class SelectionSort {
         for (int i = 0; i < numbers.length; i++) { //generate random numbers between 0 and 99
             numbers[i] = rand.nextInt(100);
         }
-        System.out.println("Before sorting:" + Arrays.toString(numbers));
+        System.out.println("Before sorting: " + Arrays.toString(numbers));
         selectionSort(numbers);
-        System.out.println("After sorting:" + Arrays.toString(numbers));
-
-
+        System.out.println("After sorting: " + Arrays.toString(numbers));
     }
 
     private static void selectionSort(int[] numbers) {
